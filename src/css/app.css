@@ -1,0 +1,120 @@
+@import "tachyons";
+
+@keyframes rainbow-bg {
+  0% {
+    background-color: #39C689;
+  }
+  33% {
+    background-color: #2B97FD;
+  }
+  66% {
+    background-color: #7d5ae0;
+  }
+  100% {
+    background-color: #39C689;
+  }
+}
+
+@keyframes rainbow-text {
+  0% {
+    color: #39C689; }
+  33% {
+    color: #2B97FD; }
+  66% {
+    color: #7d5ae0; }
+  100% {
+    color: #39C689; } }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color .25s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  cursor: pointer;
+}
+
+.rainbow-text:hover {
+  animation: rainbow-text 2s infinite;
+}
+
+
+.lj {
+  width: 1.5rem;
+}
+
+
+.fluid {
+  font-size: calc(16px + (21 - 16) * ( (100vw - 400px) / ( 1200 - 400) ))
+}
+
+
+
+/*
+.v2-copy {
+  font-size: 14px; }
+  @media (min-width: 400px) and (max-width: 1200px) {
+    .v2-copy {
+      font-size: calc(14px + (20 - 14) * ( (100vw - 400px) / ( 1200 - 400) )); } }
+  @media (min-width: 1200px) {
+    .v2-copy {
+      font-size: 20px; } }
+
+.v2-copy--small {
+  font-size: 10.5px; }
+  @media (min-width: 400px) and (max-width: 1200px) {
+    .v2-copy--small {
+      font-size: calc(10.5px + (15 - 10.5) * ( (100vw - 400px) / ( 1200 - 400) )); } }
+  @media (min-width: 1200px) {
+    .v2-copy--small {
+      font-size: 15px; } }
+
+.v2-copy--large {
+  font-size: 17.5px;}
+  @media (min-width: 400px) and (max-width: 1200px) {
+    .v2-copy--large {
+      font-size: calc(17.5px + (25 - 17.5) * ( (100vw - 400px) / ( 1200 - 400) )); } }
+  @media (min-width: 1200px) {
+    .v2-copy--large {
+      font-size: 25px; } }
+
+.v2-copy--white {
+  color: #fff; }
+
+.v2-title {
+  font-family: 'Roboto', sans-serif;
+  margin: 0; }
+
+.v2-title--1 {
+  font-size: 44.198px;}
+  @media (min-width: 400px) and (max-width: 1200px) {
+    .v2-title--1 {
+      font-size: calc(44.198px + (63.14 - 44.198) * ( (100vw - 400px) / ( 1200 - 400) )); } }
+  @media (min-width: 1200px) {
+    .v2-title--1 {
+      font-size: 63.14px; } }
+
+.v2-title--2 {
+  font-size: 33.166px;}
+  @media (min-width: 400px) and (max-width: 1200px) {
+    .v2-title--2 {
+      font-size: calc(33.166px + (47.38 - 33.166) * ( (100vw - 400px) / ( 1200 - 400) )); } }
+  @media (min-width: 1200px) {
+    .v2-title--2 {
+      font-size: 47.38px; } }
+
+.v2-title--3 {
+  font-size: 24.878px;}
+  @media (min-width: 400px) and (max-width: 1200px) {
+    .v2-title--3 {
+      font-size: calc(24.878px + (35.54 - 24.878) * ( (100vw - 400px) / ( 1200 - 400) )); } }
+  @media (min-width: 1200px) {
+    .v2-title--3 {
+      font-size: 35.54px; } }
+
+.v2-title--4 {
+  font-size: 18.662px;}
+  @media (min-width: 400px) and (max-width: 1200px) {
+    .v2-title--4 {
+      font-size: calc(18.662px + (26.66 - 18.662) * ( (100vw - 400px) / ( 1200 - 400) )); } }
+  @media (min-width: 1200px) {
+    .v2-title--4 {
+      font-size: 26.66px; } }*/
