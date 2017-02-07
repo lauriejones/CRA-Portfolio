@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
-import Logo from './Logo'
+import Logo from './Logo';
+import SocialLinks from './SocialLinks';
 
 class Footer extends Component {
   render() {
-    const year = new Date().getFullYear();
     return (
-      <div className="bg-near-black silver flex justify-between pa3 ph4-ns pv4-l ph5-l">
-      <Link to="/home" className="dib silver rainbow-text">
-        <Logo size="small"/>
-      </Link>
-        <div>&copy; {year} Laurie Jones. All rights reserved.</div>
+      <div className="bg-near-black silver f6 flex justify-between items-center">
+        <div className="mw9 center flex  justify-between items-center w-100">
+          <Link to="/" className="dib hover-light-gray pa3" style={{height: '1rem'}}>
+            <Logo size="small" className=""/>
+          </Link>
+          <SocialLinks className="dn dib-l"/>
+          <div className="ml3 tr" style={{flexGrow: '1'}}>
+            <a className="no-underline hover-light-gray dib pa3" href="mailto:hello@lauriejones.me">✉️ hello@lauriejones.me</a>
+          </div>
+        </div>
       </div>
     );
   }

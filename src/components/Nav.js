@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import classNames from 'classnames';
 
 class Nav extends Component {
   render() {
     const { className } = this.props;
+    const navItemClasses = classNames('dib pa2 ml3-ns ml4-l f6 f5-ns no-underline underline-hover', className);
+    const activeNavItemClasses = classNames('rainbow-text');
     return (
       <div className={ className }>
         <nav className="nav">
-          <Link to="/about" className="nav__item ml3 ml4-ns f5 f4-ns fw6 mid-gray no-underline dim">About</Link>
-          <Link to="/work" className="nav__item ml3 ml4-ns f5 f4-ns fw6 mid-gray no-underline dim">Work</Link>
-          <Link to="/services" className="nav__item ml3 ml4-ns f5 f4-ns fw6 mid-gray no-underline dim">Services</Link>
-          <Link to="/contact" className="nav__item ml3 ml4-ns f5 f4-ns fw6 mid-gray no-underline dim">Contact</Link>
+          <Link to="/work" className={navItemClasses} activeClassName={activeNavItemClasses}>Work</Link>
+          <Link to="/services" className={navItemClasses} activeClassName={activeNavItemClasses}>Services</Link>
+          <Link to="/contact" className={navItemClasses} activeClassName={activeNavItemClasses}>Contact</Link>
         </nav>
       </div>
     );

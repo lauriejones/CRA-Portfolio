@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 
 class CtaSection extends Component {
   render() {
     const {heading, callout, url, button} = this.props;
     return (
-      <div className="bg-blue white pa3 pa4-m pa5-l">
-        <h3>{heading}</h3>
-        <p>{callout}</p>
-        <a href={url}>{button}</a>
+      <div>
+        <h3 className="dib mr2 f3 lh-title">{heading}</h3>
+        {callout
+          && (<p>{callout}</p>)
+        }
+        <Link to={url} className="f6 fw6 dib bg-white dark-gray ph3 pv2 br2 grow no-underline mr2">{button}</Link>
       </div>
     );
   }

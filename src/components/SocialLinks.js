@@ -2,17 +2,40 @@ import React, { Component } from 'react';
 
 class ProjectList extends Component {
   render() {
+    const {className} = this.props;
+    const socialLinksData = [
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/laurie_jones'
+      },
+      {
+        name: 'Facebook',
+        url: 'https://www.facebook.com/lauriejonesme'
+      },
+      {
+        name: 'Linked In',
+        url: 'https://au.linkedin.com/in/lauriejonesme'
+      },
+      {
+        name: 'Dribbble',
+        url: 'https://dribbble.com/lauriejones'
+      },
+      {
+        name: 'GitHub',
+        url: 'https://github.com/lauriejones'
+      }
+    ];
+    const socialLinks = socialLinksData.map(site => {
+      return <span key={site.name}>
+        <span className="">&middot;</span>
+        <a href={site.url} className="no-underline hover-light-gray dib ph2 pv3">
+          {site.name}
+        </a>
+      </span>;
+    })
     return (
-      <div className="">
-        <a href="#" className="no-underline underline-hover mr1">Twitter</a>
-        &middot;
-        <a href="#" className="no-underline underline-hover mh1">Facebook</a>
-        &middot;
-        <a href="#" className="no-underline underline-hover mh1">Linked In</a>
-        &middot;
-        <a href="#" className="no-underline underline-hover ml1">Dribbble</a>
-        &middot;
-        <a href="#" className="no-underline underline-hover ml1">GitHub</a>
+      <div className={className}>
+        {socialLinks}
       </div>
     );
   }

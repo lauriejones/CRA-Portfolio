@@ -3,8 +3,9 @@ import classNames from 'classnames';
 
 class Logo extends Component {
   render() {
-    const { size } = this.props;
-    const classes = classNames('grow-large', {
+    const { size, className } = this.props;
+    const classes = classNames({
+      className,
       'w1': size === 'small',
       'lj w2-l': size === 'medium'
     })
@@ -20,7 +21,8 @@ class Logo extends Component {
 }
 
 Logo.PropTypes = {
-  size: React.PropTypes.string
+  size: React.PropTypes.string,
+  className: React.PropTypes.string
 }
 
 Logo.defaultProps = {
